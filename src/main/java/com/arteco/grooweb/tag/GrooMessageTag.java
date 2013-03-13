@@ -43,6 +43,11 @@ public class GrooMessageTag extends TagSupport {
 			GrooLocaleResolver localeResolver = (GrooLocaleResolver) this.pageContext.getRequest().getAttribute("grooLocaleResolver");
 			Locale locale = localeResolver.getLocale((HttpServletRequest) this.pageContext.getRequest());
 			String text = messenger.interpolate(locale, code, values);
+
+			if (StringUtils.trimToNull(text) == null) {
+				text = "¿¿¿" + code + "???";
+			}
+
 			if (capitalize) {
 				text = StringUtils.capitalize(text);
 			}
