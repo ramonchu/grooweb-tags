@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<description>JSTL 1.1 Grooweb functions library</description>
+	<display-name>JSTL Grooweb functions</display-name>
+	<tlib-version>3.0</tlib-version>
+	<short-name>fr</short-name>
+	<uri>http://www.grooweb.com/jsp/jstl/functions</uri>
+
+	<tag>
+		<description></description>
+		<name>message</name>
+		<tag-class>com.arteco.grooweb.tag.GrooMessageTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>key message</description>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				Valores para la interpolacion
+			</description>
+			<name>values</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				Capitaliza el texto
+			</description>
+			<name>capitalize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				Mayusculiza todo el texto
+			</description>
+			<name>upperCase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<description></description>
+		<name>allowed</name>
+		<tag-class>com.arteco.grooweb.tag.GrooAllowedTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>key message</description>
+			<name>roles</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description></description>
+		<name>isAnonym</name>
+		<tag-class>com.arteco.grooweb.tag.GrooIsAnonymTag</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+</taglib>
